@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  react-app:
+    build: ./react-jwt
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./react-jwt:/usr/src/app
+
+  ruby-app:
+    build: ./ruby-jwt
+    ports:
+      - "4567:4567"
+    volumes:
+      - ./ruby-jwt:/app
